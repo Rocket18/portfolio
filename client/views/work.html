@@ -1,0 +1,31 @@
+<template name="work">
+
+	<div class="row">
+		<h3>I pragraming more then 4 year. I work with followining:</h3>
+	</div>
+{{> list}}
+		
+	
+
+</template>
+
+
+<template name="list">
+
+
+<div class="row">
+
+	{{#each list}}
+	<div class="col-md-4">
+ 		<h3>{{category}}:</h3>
+		<ul>
+			{{#each array}}
+			<li>{{title}}</li>
+			{{/each}}
+			
+		</ul>
+		</div>
+		
+	{{/each}}
+	</div>
+</template>

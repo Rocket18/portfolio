@@ -1,0 +1,78 @@
+ <template name="MasterLayout">
+
+ <div class="page-wrap">
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+        			<div class="social-icons pull-right">
+            			<ul class="nav navbar-nav">
+               				 <li>
+                    			<a href="https://www.facebook.com/krasnytsia" target="_blank"><i class="fa fa-facebook"></i></a>
+               				 </li>
+			                <li>
+			                    <a href="https://twitter.com/EasyTest_" target="_blank"><i class="fa fa-twitter"></i></a>
+			                </li>
+			                <li>
+			                    <a href="https://plus.google.com/u/0/+ТарасКрасниця/" target="_blank"><i class="fa fa-google-plus"></i> </a>
+			                </li>
+			               	
+						</ul>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="header-middle" id="menu">
+             <nav class="navbar ">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a  class="navbar-brand" href="{{pathFor 'about'}}" >[Taras Krasnytsia]</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse top-menu" aria-expanded="false" style="height: 1px;">
+      
+            <ul class="nav navbar-nav navbar-right ">
+              <li><a href="{{pathFor 'work'}}">Work</a></li>
+              <li><a href="{{pathFor 'projects'}}">MyProject</a></li>
+              <li><a href="{{pathFor 'contact'}}">Contact me</a></li>      
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+            <!--header-middle-->
+ 
+        </div>
+
+
+
+
+        <div class="container-fluid" id="section">
+
+            <section class="container">
+
+              
+  {{> yield}}
+            </section>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+        <div class="row">
+          <p class="text-center">Copyright  &#169; 2015 . All right reserved.</p>
+          </div>
+        </div>
+	<div>
+</div>
+</div>
+
+
+
+
+</template>
