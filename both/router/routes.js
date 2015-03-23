@@ -4,27 +4,55 @@
 Router.configure({
   layoutTemplate: 'MasterLayout',
   loadingTemplate: 'Loading',
-  notFoundTemplate: 'NotFound'
+  notFoundTemplate: 'NotFound',
+   waitOn: function() { 
+    Meteor.subscribe('user'); 
+  
+      Meteor.subscribe('technology'); 
+   Meteor.subscribe('contacts'); 
+      Meteor.subscribe('projects'); 
+
+
+}
 });
 
 
 Router.map(function() {
 
-	this.route('about', {path: '/'});
+	this.route('about', {path: '/',
+// template:"Name",
+// data:{
+// 	lists:[prop:"value"]
+// },
+// action:function()
+// {
+//Custom logic
+//}
+});
 
 
-	this.route('work', {
-	path: '/work'  
+	this.route('technology', {
+	path: '/technology' ,
+	data:{
+		items:Technology.find()
+	}
 	});
 
 
 
 		this.route('projects', {
-	path: '/my-projects'  
+	path: '/my-projects'  ,
+	data:  {
+	items: Projects.find()
+	
+} 
 	});
 
 			this.route('contact', {
-	path: '/contact-me'  
+	path: '/contact-me'  ,
+	data:{
+	items:  Contacts.find()
+ 	},
 	});
 });
 

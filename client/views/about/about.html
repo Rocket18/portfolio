@@ -1,0 +1,23 @@
+<template name="about">
+	<div class="row">
+		<h2 class="text-center">Hello. My name is {{username}}. A glad to see you in my page</h2>
+
+		<div class="col-md-4">
+			<img src="images/avatar.jpg" width="240" class="img-responsive center-block" alt="my-photo" />
+		</div>
+
+		<div class="col-md-8">
+			<table class="table">
+				<tbody>
+					{{#each user}}
+						<tr>
+							<th>{{key}}</th>
+							<td>{{value}}</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</template>

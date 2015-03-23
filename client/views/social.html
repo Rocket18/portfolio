@@ -1,0 +1,13 @@
+<template name="social">
+<div class="social-icons pull-right">
+	<ul class="nav navbar-nav">
+	{{#each Socials}}
+	 <li>
+		<a href="{{content}}" target="_blank"><i class="fa {{icon}}"></i></a>
+	 </li>
+	{{/each}} 	
+	</ul>
+</div>  
+</template>
+
+

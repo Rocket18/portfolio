@@ -1,0 +1,21 @@
+<template name="technology">
+
+	<div class="row">
+		<h3>I pragraming more then 4 year. I work with followining:</h3>
+	</div>
+{{#each items}}
+	<div class="col-md-4">
+ 		<h3>{{category}}:</h3>
+		<ul>
+			{{#each array}}
+			<li>{{title}}</li>
+			{{/each}}
+			
+		</ul>
+		</div>
+		
+	{{/each}}
+		
+	
+
+</template>
